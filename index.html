@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>College of Science and Technology</title>
+  <link rel="icon" type="image/x-icon" href="icon.jpg">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #002266;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header marquee {
+      font-size: 1.5em;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    header marquee img {
+      margin-right: 0px;
+      vertical-align: middle;
+      max-height: 40px;
+    }
+    header marquee span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    nav {
+      background-color: #002266;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav ul li a:hover {
+      background-color: #0044cc;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #002266;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    nav ul li ul li {
+      width: 330px;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    .content {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .intro img {
+      margin: 20px auto;
+      border: 2px solid #002266;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      max-width: 100%;
+      height: auto;
+    }
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+    h2 {
+      background-color: #002266;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+	    h3 {
+      background-color: #002266;
+      color: white;
+      padding: 8px;
+      border-radius: 5px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: whitesmoke;
+    }
+    table, th, td {
+      border: 1px solid #002266;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .labs-table {
+      width: 80%;
+      margin: 20px auto;
+    }
+    .labs-table caption {
+      font-size: large;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .labs-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .labs-images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .contact {
+      background-color: #002266;
+      color: white;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .contact p {
+      margin: 5px 0;
+    }
+    .sponsors {
+      background-color: #f4f4f9;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .sponsors h2 {
+      background-color: transparent;
+      color: #002266;
+    }
+    .sponsors img {
+      max-width: 100px;
+      margin: 10px;
+    }
+    footer {
+      background-color: #002266;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    .section {
+      display: none;
+    }
+      h2 {
+        font-size: 1.2em;
+      }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll('.section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+	
+  </script>
+</head>
+<body>
+  <header>
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      <img src="banner.jpg" width="100" height="50" alt="UC Logo">
+      <span>Welcome to College of Science and Technology </span>
+	  <img src="banner.jpg" width="100" height="50" alt="UC Logo">
+    </marquee><br>
+	<img src="banner1.jpg" width="95%" alt="banner1">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('background')">Home</a></li>
+	  <li><a href="#" onclick="showSection('news')">News</a></li>
+      <li>
+        <a href="#">Programs</a>
+        <ul>
+          <li><a href="#" onclick="showSection('cs')">Computer Science</a></li>
+          <li><a href="#" onclick="showSection('IT')">Information Technology</a></li>
+          <li><a href="#" onclick="showSection('etc')">Electronics and Telecommunications</a></li>
+          <li><a href="#" onclick="showSection('gdm')">Graphic Design And Multimedia</a></li>
+		  <li><a href="#" onclick="showSection('bmit')">Business Management</a></li>
+		  <li><a href="#" onclick="showSection('necs')">Network Engineering and Cyber Security</a></li>
+		  <li><a href="College of Science and Technology.html" target="_blank">Certificate Programs</a></li>
+        </ul>
+      </li>
+      <li><a href="faculty.html" target="_blank">Faculty Members</a></li>
+	  <li><a href="#" >Computer labs</a>
+	  <ul>
+          <li><a href="#" onclick="showSection('ml')">Multimedia Lab</a></li>
+		  <li><a href="#" onclick="showSection('el')">E-Learning Lab</a></li>
+		  <li><a href="#" onclick="showSection('nl')">Networking Lab</a></li>
+		  <li><a href="#" onclick="showSection('il')">IT-Center Lab</a></li>
+		</ul> 
+		</li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+      <li><a href="#" onclick="showSection('sponsorships')">Sponsorships</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <div id="background" class="section">
+      <h2>College of Science and Technology</h2>
+      <p>Welcome to the College of Science and Technology at The University of Cambodia. Our college offers a variety of programs designed to prepare students for successful careers in technology and beyond. With a focus on innovation and practical experience, we aim to provide our students with the skills and knowledge they need to excel in their chosen fields.</p>
+  <div class="intro">
+  <img src="1.jpg" width="32.5%" />
+  <img src="2.jpg" width="32.5%" />
+  <img src="3.jpg" width="32.5%" />
+  </div>
+  <p>
+    For everyone who wishes to pursue for nay AA and BA degreese of the study
+    programs. please register now or vist the campus of The University of
+    Camboida.
+  </p>
+  <h3>Majors offerning in College of Science Technology</h3>
+  <table id="t01">
+    <tr>
+      <th>Majors</th>
+      <th>Associate, Bachelor</th>
+      <th>Master, PhD</th>
+    </tr>
+    <tr>
+      <td>Computer Science (Offering)</td>
+      <td>AA and BA</td>
+      <td>MS and PhD</td>
+    </tr>
+    <tr>
+      <td>Information Technology (Offering)</td>
+      <td>BA</td>
+      <td>AA</td>
+    </tr>
+    <tr>
+      <td>Electronics and Telecommunication (Not yet offering)</td>
+      <td>BA</td>
+      <td>AA</td>
+    </tr>
+  </table>
+	  <div class="intro">
+		<img src="offer.jpg" class="center"><br><br>
+      </div>
+    </div>
+	
+	<div id="news" class="section">
+      <h2>News</h2>
+      <p>60% Special scholars for general students and 70% for officials and teachers under the crown Educate young people and sports without passing the exams for a new course, course 3 awaits you! Start receiving receipts from this publishing date to the new course to enroll on Monday, July 15, 2014. For more information please contact the telephone number: 069 659,609 / 070,351,738 (Telegram). Thank you!<br>
+	  <div class="intro">
+		<img src="banner2.jpg" class="center"><br><br>
+      </div>
+	 </div>
+	 
+	<div id="cs" class="section">
+      <h2>Computer Science</h2>
+	<p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+Computer science focuses on the development and testing of software and software systems. It involves working with mathematical models, data analysis and security, algorithms, and computational theory. Computer scientists define the computational principles that are the basis of all software.
+<br><br>Student Outcomes:<br>
+Our learning outcomes are statements that describe skills that we expect to enable our student to attain by the time of graduation.<br>
+<br>1. An ability to apply mathematics to solving computing problems.
+<br>2. An ability to critically analyze a problem and to design, implement, and evaluate a computing solution that meets requirements.
+<br>3. An ability to work effectively in small groups on medium scale computing projects.
+<br>4. An ability to effectively communicate technical concepts in oral and written form.
+<br>5. An ability to understand the social and ethical implications of working as a professional in the field of computer science.
+<br>6. An ability to use current tools and methodologies in computing practice.
+
+
+	</p>
+	<h3>Section & Time</h3>
+	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+    </div>
+
+    <div id="IT" class="section">
+      <h2>Information Technology</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+Information technology (IT) is a set of related fields that encompass computer systems, software, programming languages and data and information processing and storage. IT forms part of information and communications technology (ICT)
+<br><br>Student Outcomes:<br>
+<br>1. Analyze a complex computing problem and to apply principles of computing and other relevant disciplines to identify solutions.
+<br>2. Design, implement and evaluate a computing-based solution meeting computing requirements in the context of the program’s discipline.
+<br>3. Communicate effectively in a variety of professional contexts.
+<br>4. Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles.
+<br>5. Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline.
+<br>6. Identify and analyze user needs to apply in the selection, creation, integration, evaluation, and administration of computing-based systems.
+</p>
+    	<h3>Section & Time</h3>
+	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+
+    <div id="etc" class="section">
+      <h2>Electronics and Telecommunications</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+Electronics and telecommunications engineering is a modern engineering discipline that deals with designing, fabricating, producing, testing and supervising the manufacturing process of complex electronic products and systems
+<br><br>Student Outcomes:<br>
+<br>1. Students will become the electronic and telecommunication engineers with good basic knowledge, both in theory and in experiments.
+<br>2. Students master the methodology for conducting research, have critical thinking and creativity; have ability of self-learning and studying electronics and telecommunications at graduate level.
+<br>3. Students are able to design, implement the electronic equipment, operate the telecommunication systems; manage, consult, and provide technical support on electronic and telecommunication products and projects.
+<br>4. Students have ability to work independently as well as together in groups in high pressure environment; ability to develop and integrate in high quality job market.
+<br>5. Students are trained to be electronic and telecommunication engineers with good specialized knowledge as well as good health and professional ethics.
+</p>
+    	<h3>Section & Time</h3>
+	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+
+    <div id="gdm" class="section">
+      <h2>Graphic Design And Multimedia</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+Graphic Design and Multimedia focus on visual communication in that different messages are conveyed through design used in print publications and multimedia. he Graphic Design and Multimedia Arts program of study explores the occupations and educational opportunities associated with designing or creating graphics to meet specific commercial or promotional needs, such as packaging, displays, or logos. This program of study may also include exploration into designing clothing and accessories, and creating special effects, animation, or other visual images using film, video, computers, or other electronic tools and media, for use in computer games, movies, music videos, and commercials.
+<br><br>Program Learning Outcomes:<br>
+<br>1. Conceptualize and develop design solutions using principles of design to create visual communications that meet the needs of the project.
+<br>2. Employ the design process to create design solutions that meet the project objectives and the needs of the client and/or user.
+<br>3. Plan, create and use photography, illustration and typography in design layouts to meet the requirements of the creative brief.
+<br>4. Design, develop and create a variety of media products using relevant, current and/or emerging technologies.
+<br>5. Communicate ideas, design concepts and opinions clearly and persuasively to others.
+<br>6. Use recognized industry practices throughout the design process and related business tasks.
+<br>7. Plan, implement, and evaluate graphic design projects using project management skills to deliver quality work to clients according to schedule and within budget.
+<br>8. Complete all work in a professional and ethical manner, and in accordance with all applicable legislation and regulations.
+<h3>Section & Time</h3>
+	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+	
+	<div id="bmit" class="section">
+      <h2>Business Management Information Technology </h2>
+      <p>Our Information Technology Management for Business (ITMB) degree covers a vibrant mix of transferable skills and knowledge for those who want exciting and challenging management or professional careers designing, developing and implementing technology solutions for businesses. The ITMB degree is designed to offer an insight into the real world of IT. It allows you to learn the people and project management skills required to be a successful IT professional.
+<br><br>Program Learning Outcomes:<br>
+As a graduate, you will be prepared to reliably demonstrate the ability to:<br>
+<br>1-Analyze business problems and make ethically sound strategic decisions enabled by Information Technology (IT).
+M2-anage a business technology project within a cross-functional and multi-disciplinary team by applying project management principles.
+<br>3-Adopt operations management principles and information technology to improve efficiency and effectiveness of business processes.
+<br>4-Propose strategic and operational solutions by applying principles of management accounting and financial analysis.
+<br>5-Design information technology solutions that automate and support business processes.
+<br>6-Model ethical, legal and professional codes of conduct of the Canadian business environment and global marketplace.
+<br>7-Build data solutions to support business operations, strategic decision making and business planning to improve organizational performance and ensure adequate risk management.
+<br>8-Evaluate organizational structures and management processes, with a focus on small and medium-sized enterprises, to improve organizational performance.
+<br>9-Provide direction about the opportunities for the integration of technology, commerce and marketing to support innovative digital business models.
+
+<h3>Section & Time</h3>
+	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+		<div id="necs" class="section">
+      <h2>Network Engineering and Cyber Security</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+Cybersecurity is the use of technologies, processes, and controls to protect a computer or network from malicious attacks. For network engineers, cybersecurity focuses on protecting the integrity of networks and data
+<br><br>Program Learning Outcomes:<br>
+Our five learning outcomes are: To develop Cybersecurity graduates…<br>
+<br>1. With the technical knowledge and skills needed to secure computer systems and networks.
+<br>2. That can plan, develop, and implement a cybersecurity risk management program for organizations.
+<br>3. With the sufficient red/blue team skills to attack, defend and audit information system resources.
+<br>4. That can secure, manage, and assess cloud-based information resources.
+<br>5. With the knowledge to pass an entry-level, professional cybersecurity certification exam.
+
+<h3>Section & Time</h3>
+ 	 <table>
+            <tr>
+                <th>MONDAY - FRIDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+                <th>EVENING</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>8:00 - 11:15 AM</td>
+                <td>2:00 - 5:15 PM</td>
+                <td>5:45 - 8:45 AM</td>
+            </tr>
+			<tr>
+                <th>SATURDAY - SUNDAY</th>
+                <th>MORNING</th>
+                <th>AFTERNOON</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>7:30 - 12:15 AM</td>
+                <td>1:00 - 4:15 PM</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+    <div id="Faculty Members" class="section">
+      <h2>Faculty Members</h2>
+      <p>Our faculty consists of experienced professionals and academics who are dedicated to providing the highest quality education. They bring a wealth of knowledge and industry experience to the classroom, ensuring that students receive a well-rounded education.</p>
+	</div>
+	
+	<div id="ml" class="section">
+      <h2>Multimedia Lab</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+	  </p>
+	  <div class="intro">
+		<img src="5.jpg" height="200" width="300">
+		<img src="19.jpg" height="200" width="300">
+	</div>
+    	 <table>
+            <tr>
+                <th>Multimedia Lab</th>
+                <th>E-Learning Lab</th>
+                <th>Networking Lab</th>
+                <th>IT-Center Lab</th>
+            </tr>
+            <tr>
+                <td>Graphic Design</td>
+                <td>Graphic Design</td>
+                <td>Networking Desgin</td>
+                <td>Computer Applications</td>
+            </tr>
+			<tr>
+                <td>Graphic Design</td>
+                <td>Computer Applications</td>
+                <td>Produce Videos Contents</td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td>Mobile Applicatios</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+
+		<div id="el" class="section">
+      <h2>E-Learning Lab</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.
+	  </p>
+	  	  <div class="intro">
+		<img src="15.jpg" height="200" width="300">
+		<img src="16.jpg" height="200" width="300">
+	</div>
+    	 <table>
+            <tr>
+                <th>Multimedia Lab</th>
+                <th>E-Learning Lab</th>
+                <th>Networking Lab</th>
+                <th>IT-Center Lab</th>
+            </tr>
+            <tr>
+                <td>Graphic Design</td>
+                <td>Graphic Design</td>
+                <td>Networking Desgin</td>
+                <td>Computer Applications</td>
+            </tr>
+			<tr>
+                <td>Computer Applications</td>
+                <td>Produce Videos Contents</td>
+            </tr>
+            <tr>
+                <td>Mobile Applicatios</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+	
+			<div id="nl" class="section">
+      <h2>Networking Lab</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.</p>
+    	 	  <div class="intro">
+		<img src="20.jpg" height="200" width="300">
+		<img src="18.jpg" height="200" width="300">
+	</div>
+		 <table>
+            <tr>
+                <th>Multimedia Lab</th>
+                <th>E-Learning Lab</th>
+                <th>Networking Lab</th>
+                <th>IT-Center Lab</th>
+            </tr>
+            <tr>
+                <td>Graphic Design</td>
+                <td>Graphic Design</td>
+                <td>Networking Desgin</td>
+                <td>Computer Applications</td>
+            </tr>
+			<tr>
+                <td>Computer Applications</td>
+                <td>Produce Videos Contents</td>
+            </tr>
+            <tr>
+                <td>Mobile Applicatios</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+	
+			<div id="il" class="section">
+      <h2>IT-Center Lab</h2>
+      <p>Welcome to College of Science and Technology of The University of Cambodia. For everyone who wishes to pursue for any AA and BA degrees of the study programs, please register now or visit the campus of The University of Cambodia.</p>
+    	 <div class="intro">
+		<img src="12.jpg" height="200" width="300">
+		<img src="11.jpg" height="200" width="300">
+	</div>
+		 <table>
+            <tr>
+                <th>Multimedia Lab</th>
+                <th>E-Learning Lab</th>
+                <th>Networking Lab</th>
+                <th>IT-Center Lab</th>
+            </tr>
+            <tr>
+                <td>Graphic Design</td>
+                <td>Graphic Design</td>
+                <td>Networking Desgin</td>
+                <td>Computer Applications</td>
+            </tr>
+			<tr>
+                <td>Computer Applications</td>
+                <td>Produce Videos Contents</td>
+            </tr>
+            <tr>
+                <td>Mobile Applicatios</td>
+			</tr>
+	</table><br><br><br>
+	</div>
+	
+    <div id="contact" class="section">
+      <h2>Contact Information</h2>
+	  <p><b>The University of Cambodia</b></p><br>
+	  <p><b>Address		:</b> Northbridge Road, Sangkat Toek Thla, Khan Sen Sok, Phnom Penh. P.O Box 917, Phnom Penh 12000, Cambodia</p>
+      <p><b>Email		:</b> education@uc.edu.kh, education@uc.edu.kh, education@uc.edu.kh, education@uc.edu.kh, education@uc.edu.kh</p>
+      <p><b>Phone		:</b> (855-23) 993 274, 993 276, (855-60) 333 346</p>
+      <p><b>Website		:</b> <a href="http://www.cost.uc.edu.kh">http://www.cost.uc.edu.kh</a> / <a href="http://www.uc.edu.kh">http://www.uc.edu.kh</a></p>
+	  <p><b>Facebook	:</b> www.facebook.com/universityofcambodiaCoST</p>
+	  <p><b>Wikipedia	:</b> wikipedia.org/wiki/University_of_Cambodia</p><br><br><br>
+    </div>
+
+    <div id="sponsorships" class="section">
+      <h2>Sponsorships</h2>
+      <p>We are grateful for the support of our sponsors, who help make our programs possible. Their contributions allow us to provide high-quality education and resources to our students.</p>
+      <div class="sponsors">
+        <img src="coca.jpg" alt="Sponsor 1">
+        <img src="sting.jpg" alt="Sponsor 2">
+		<img src="aba.jpg" alt="Sponsor 2">
+		<img src="ac.png" alt="Sponsor 2">
+		<br><br><br>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+  <img src="uc.jpg" width="20" height="20">
+    Copyright &copy; 2024 College of Science and Technology, The University of Cambodia
+  </footer>
+
+  <script>
+    // Show the background section by default
+    showSection('background');
+  </script>
+</body>
+</html>
